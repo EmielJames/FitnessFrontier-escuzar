@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FitnessFrontier</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link here  -->
+    <link rel="stylesheet" href="./public/assets/plugins/css/swipper.css" />
+    <link rel="stylesheet" href="./public/assets/plugins/css/select2.css" />
+    <link rel="stylesheet" href="./public/css/tailwind.css" />
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="stylesheet" href="./public/css/responsive.css" />
+    <link rel="stylesheet" href="./public/css/styles1.css">
+
+  </head>
+
+  <body class="font-display">
+    <!-- header area start -->
+    <header class="font-display">
+      <div id="header-sticky" class="">
+        <div
+          class="main-header bg-grayscales-500 lg:border-none border-b border-grayscales-700"
+        >
+          <div class="container px-3 md:px-5 xl:px-0">
+            <div class="flex justify-between items-center py-5">
+              <div>
+                <a href="index.html">
+                  <img src="./img/logo.png" alt="" />
+                </a>
+              </div>
+              <div class="lg:max-w-[413px] lg:block hidden w-full">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="search here..."
+                    class="block w-full bg-white focus:outline-none border-0 px-4 py-3 rounded-lg focus:ring-2 ring-[#029FAE]"
+                  />
+                  <label for="search" class="absolute right-4 top-3">
+                    <svg
+                      width="23"
+                      height="22"
+                      viewBox="0 0 23 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.5833 17.4167C14.6334 17.4167 17.9167 14.1334 17.9167 10.0833C17.9167 6.03325 14.6334 2.75 10.5833 2.75C6.53325 2.75 3.25 6.03325 3.25 10.0833C3.25 14.1334 6.53325 17.4167 10.5833 17.4167Z"
+                        stroke="#272343"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M19.75 19.25L15.7625 15.2625"
+                        stroke="#272343"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="lg:block hidden">
+                <ul class="flex items-center gap-3">
+                  <li class="relative">
+                    <a
+                      href="#"
+                      class="inline-flex gap-2 bg-white rounded-lg p-[11px]"
+                      id="addToCart"
+                    >
+                      <span
+                        ><svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.52087 2.97916L4.42754 3.30916L5.31029 13.8261C5.3442 14.2399 5.5329 14.6258 5.83873 14.9066C6.14457 15.1875 6.54506 15.3427 6.96029 15.3413H16.9611C17.3587 15.3418 17.7431 15.1986 18.0436 14.9383C18.344 14.6779 18.5404 14.3178 18.5965 13.9242L19.4673 7.91266C19.4905 7.75279 19.482 7.58991 19.4422 7.43333C19.4024 7.27675 19.3322 7.12955 19.2354 7.00015C19.1387 6.87074 19.0175 6.76167 18.8786 6.67917C18.7397 6.59667 18.5859 6.54235 18.426 6.51933C18.3673 6.51291 4.73371 6.50833 4.73371 6.50833"
+                            stroke="#272343"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M12.948 9.89542H15.4899"
+                            stroke="#272343"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.55786 18.5194C6.62508 18.5165 6.69219 18.5273 6.75515 18.551C6.81811 18.5748 6.87562 18.611 6.9242 18.6575C6.97279 18.7041 7.01145 18.76 7.03787 18.8219C7.06428 18.8837 7.0779 18.9503 7.0779 19.0176C7.0779 19.0849 7.06428 19.1515 7.03787 19.2134C7.01145 19.2753 6.97279 19.3312 6.9242 19.3777C6.87562 19.4243 6.81811 19.4605 6.75515 19.4842C6.69219 19.508 6.62508 19.5187 6.55786 19.5158C6.42942 19.5103 6.30808 19.4554 6.21914 19.3626C6.13021 19.2698 6.08057 19.1462 6.08057 19.0176C6.08057 18.8891 6.13021 18.7655 6.21914 18.6726C6.30808 18.5798 6.42942 18.5249 6.55786 18.5194Z"
+                            fill="#272343"
+                            stroke="#272343"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.5721 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.5721 16.7663 18.5194 16.8988 18.5194Z"
+                            fill="#272343"
+                            stroke="#272343"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span>Cart</span>
+                      <span
+                        class="bg-dark-accents text-white rounded-full py-[3px] px-[9px] ml-1 inline-flex justify-center items-center text-[10px] leading-[100%]"
+                        >2</span
+                      >
+                    </a>
+                    <div class="cart-content">
+                      <ul class="p-6">
+                        <li class="pb-4">
+                          <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                              <div>
+                                <img
+                                  src="./img/img1.jpg"
+                                  alt=""
+                                  width="70"
+                                  height="50"
+                                />
+                              </div>
+                              <div class="px-2">
+                                <h2 class="text-gray-black">
+                                  <span>Dry Fit Shirt</span>
+                                  <span class="text-[#636270]">x2</span>
+                                </h2>
+                                <p class="text-gray-black font-semibold mb-0">
+                                  ₱300
+                                </p>
+                              </div>
+                            </div>
+                            <div>
+                              <button
+                                class="hover:bg-[#F0F2F3] bg-transparent p-2 hover:text-gray-black rounded-full text-[#9A9CAA] transition-all duration-500"
+                              >
+                                <svg
+                                  width="28"
+                                  height="28"
+                                  viewBox="0 0 28 28"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M10 10L14 14M14 14L18 10M14 14L10 18M14 14L18 18"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="py-4">
+                          <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                              <div>
+                                <img
+                                  src="./img/img2.jpg"
+                                  alt=""
+                                  width="70"
+                                  height="50"
+                                />
+                              </div>
+                              <div class="px-2">
+                                <h2 class="text-gray-black">
+                                  <span>Jacket</span>
+                                  <span class="text-[#636270]">x1</span>
+                                </h2>
+                                <p class="text-gray-black font-semibold mb-0">
+                                  ₱300
+                                </p>
+                              </div>
+                            </div>
+                            <div>
+                              <button
+                                class="hover:bg-[#F0F2F3] bg-transparent p-2 hover:text-gray-black rounded-full text-[#9A9CAA] transition-all duration-500"
+                              >
+                                <svg
+                                  width="28"
+                                  height="28"
+                                  viewBox="0 0 28 28"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M10 10L14 14M14 14L18 10M14 14L10 18M14 14L18 18"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <div
+                          class="flex justify-between items-center py-2 mb-4"
+                        >
+                          <p class="text-[#636270] text-lg">2 Products</p>
+                          <p class="text-gray-black text-xl font-medium">
+                            ₱600
+                          </p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                          <a href="shopping-cart.html" class="btn-transparent"
+                            >View Cart</a
+                          >
+                          <a href="checkout-shopping.html" class="btn-primary"
+                            >Checkout</a
+                          >
+                        </div>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="inline-flex items-center justify-center">
+                    <a
+                      href="#"
+                      class="bg-white text-gray-black hover:text-[#007580] rounded-lg p-[11px]"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2.63262 10.6315C1.64903 7.56067 2.79762 4.05075 6.02245 3.01217C6.85867 2.74459 7.74676 2.68086 8.61262 2.82629C9.47849 2.97172 10.297 3.32208 10.9999 3.84817C12.3337 2.81692 14.2743 2.46858 15.9683 3.01217C19.1922 4.05075 20.349 7.56067 19.3664 10.6315C17.8355 15.499 10.9999 19.2482 10.9999 19.2482C10.9999 19.2482 4.21478 15.5558 2.63262 10.6315V10.6315Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="relative">
+                    <button
+                      class="bg-white text-gray-black hover:text-[#007580] rounded-lg p-[11px] user-profile"
+                    >
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.9862 14.0672C7.44053 14.0672 4.4137 14.6034 4.4137 16.7503C4.4137 18.8971 7.42128 19.4526 10.9862 19.4526C14.5309 19.4526 17.5587 18.9154 17.5587 16.7695C17.5587 14.6236 14.5502 14.0672 10.9862 14.0672V14.0672Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.9862 11.0055C11.8195 11.0055 12.634 10.7584 13.3268 10.2955C14.0197 9.83255 14.5597 9.17457 14.8785 8.40475C15.1974 7.63492 15.2808 6.78783 15.1183 5.97058C14.9557 5.15334 14.5545 4.40266 13.9653 3.81346C13.3761 3.22426 12.6254 2.82301 11.8081 2.66045C10.9909 2.49789 10.1438 2.58132 9.37397 2.9002C8.60415 3.21907 7.94617 3.75906 7.48324 4.45188C7.02031 5.14471 6.77322 5.95925 6.77322 6.7925C6.76932 7.90581 7.20779 8.97508 7.99218 9.76515C8.77657 10.5552 9.84266 11.0014 10.956 11.0055H10.9862Z"
+                          stroke="currentColor"
+                          stroke-width="1.429"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <div class="profile-content">
+                      <ul class="py-3">
+                        <div class="px-3 shadow-[0px_1px_0px_#E1E3E6]">
+                          <li>
+                            <a href="sign-in.html">Sign In</a>
+                          </li>
+                          <li>
+                            <a href="sign-up.html">Create a Account</a>
+                          </li>
+                        </div>
+            
+                        <div class="px-3 shadow-[0px_1px_0px_#E1E3E6]">
+                         
+                          <li>
+                            <a href="shopping-cart.html">Shopping Cart</a>
+                          </li>
+                        </div>
+                      
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="lg:hidden inline-block hamburger-btn"
+                id="hamburger-btn"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+  
+    <nav class="desktop-navigation-menu">
+
+        <div class="container">
+  
+          <ul class="desktop-menu-category-list">
+  
+            <li class="menu-category">
+              <a href="index.html" class="menu-title">Home</a>
+            </li>
+  
+            <li class="menu-category">
+              <a href="#" class="menu-title">Categories</a>
+  
+              <div class="dropdown-panel">
+  
+                <ul class="dropdown-panel-list">
+  
+                  <li class="menu-title">
+                    <a href="#">Mens</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Dry fit shirt</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Shorts</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Sports waer</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Bags</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Others</a>
+                  </li>
+
+                  <li class="panel-list-item">
+                    <a href="#"></a>
+                  </li>
+                </ul>
+  
+                <ul class="dropdown-panel-list">
+  
+                  <li class="menu-title">
+                    <a href="#">Women</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Shirts</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Sports wear</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Shorts</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Jacket</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Others</a>
+                  </li>
+
+                  <li class="panel-list-item">
+                    <a href="#"></a>
+                  </li>
+                </ul>
+  
+                <ul class="dropdown-panel-list">
+  
+                  <li class="menu-title">
+                    <a href="#">Set goals</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Day 1</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Week 1</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">1 Month</a>
+                  </li>
+                  <li class="panel-list-item">
+                    <a href="#"></a>
+                  </li>
+                </ul>
+  
+                <ul class="dropdown-panel-list">
+  
+                  <li class="menu-title">
+                    <a href="#">Services</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">My cart</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Delivery</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Voucher</a>
+                  </li>
+  
+                  <li class="panel-list-item">
+                    <a href="#">Gift card</a>
+                  </li>
+
+                  <li class="panel-list-item">
+                    <a href="#"></a>
+                  </li>
+                </ul>
+  
+              </div>
+            </li>
+  
+            <li class="menu-category">
+              <a href="#" class="menu-title">GYM PLACES</a>
+  
+              <ul class="dropdown-list">
+  
+                <li class="dropdown-item">
+                  <a href="#">Katapatan, Cabuyao</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#">Mamatid, Cabuyao</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#">Parian, Calamba</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#"></a>
+                </li>
+  
+              </ul>
+            </li>
+  
+            <li class="menu-category">
+              <a href="#" class="menu-title">BOOK NOW</a>
+  
+              <ul class="dropdown-list">
+  
+                <li class="dropdown-item">
+                  <a href="#">Basic</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#">Gold</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#">Platenum</a>
+                </li>
+  
+                <li class="dropdown-item">
+                  <a href="#">Premium</a>
+                </li>
+  
+              </ul>
+            </li>
+  
+            <li class="menu-category">
+              <a href="#newsletter-card" class="menu-title">CONTACT US</a>
+            </li>
+  
+            <li class="menu-category">
+              <a href="#" class="menu-title">ABOUT US</a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </nav>
+  
+      <div class="mobile-bottom-navigation">
+  
+        <button class="action-btn" data-mobile-menu-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+  
+        <button class="action-btn">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+  
+          <span class="count">0</span>
+        </button>
+  
+        <button class="action-btn">
+          <ion-icon name="home-outline"></ion-icon>
+        </button>
+  
+        <button class="action-btn">
+          <ion-icon name="heart-outline"></ion-icon>
+  
+          <span class="count">0</span>
+        </button>
+  
+        <button class="action-btn" data-mobile-menu-open-btn>
+          <ion-icon name="grid-outline"></ion-icon>
+        </button>
+  
+      </div>
+  
+      <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+  
+        <div class="menu-top">
+          <h2 class="menu-title">Menu</h2>
+  
+          <button class="menu-close-btn" data-mobile-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+  
+        <ul class="mobile-menu-category-list">
+  
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+  
+          <li class="menu-category">
+  
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Men's</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Shirt</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Shorts & Jeans</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Safety Shoes</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Wallet</a>
+              </li>
+  
+            </ul>
+  
+          </li>
+  
+          <li class="menu-category">
+  
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Women's</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Dress & Frock</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Earrings</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Necklace</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Makeup Kit</a>
+              </li>
+  
+            </ul>
+  
+          </li>
+  
+          <li class="menu-category">
+  
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Jewelry</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Earrings</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Couple Rings</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Necklace</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Bracelets</a>
+              </li>
+  
+            </ul>
+  
+          </li>
+  
+          <li class="menu-category">
+  
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Perfume</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Clothes Perfume</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Deodorant</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Flower Fragrance</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Air Freshener</a>
+              </li>
+  
+            </ul>
+  
+          </li>
+  
+          <li class="menu-category">
+            <a href="#" class="menu-title">Blog</a>
+          </li>
+  
+          <li class="menu-category">
+            <a href="#" class="menu-title">Hot Offers</a>
+          </li>
+  
+        </ul>
+  
+        <div class="menu-bottom">
+  
+          <ul class="menu-category-list">
+  
+            <li class="menu-category">
+  
+              <button class="accordion-menu" data-accordion-btn>
+                <p class="menu-title">Language</p>
+  
+                <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+              </button>
+  
+              <ul class="submenu-category-list" data-accordion>
+  
+                <li class="submenu-category">
+                  <a href="#" class="submenu-title">English</a>
+                </li>
+  
+                <li class="submenu-category">
+                  <a href="#" class="submenu-title">Espa&ntilde;ol</a>
+                </li>
+  
+                <li class="submenu-category">
+                  <a href="#" class="submenu-title">Fren&ccedil;h</a>
+                </li>
+  
+              </ul>
+  
+            </li>
+  
+            <li class="menu-category">
+              <button class="accordion-menu" data-accordion-btn>
+                <p class="menu-title">Currency</p>
+                <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+              </button>
+  
+              <ul class="submenu-category-list" data-accordion>
+                <li class="submenu-category">
+                  <a href="#" class="submenu-title">USD &dollar;</a>
+                </li>
+  
+                <li class="submenu-category">
+                  <a href="#" class="submenu-title">EUR &euro;</a>
+                </li>
+              </ul>
+            </li>
+  
+          </ul>
+  
+          <ul class="menu-social-container">
+  
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </nav>
+    </header>
+    <!-- header area end -->
+
+    <br>
+    <br>
+    <br>
+
+    <!-- banner section start -->
+    <div
+      class="banner-section 2xl:mx-[90px]  rounded-bl-[20px] rounded-br-[20px] font-display relative z-1 "
+    >
+      <div class="swiper bannerSwiper xl:pt-20 py-6 xl:pb-28 relative z-50">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="container px-3 md:px-5 flex flex-col md:flex-row items-center"
+            >
+              <div class="md:w-1/2 w-full">
+                <p class="text-gray-black text-sm tracking-[0.12em] mb-2">
+                  FitnessFrontier                </p>
+                <h1
+                  class="xl:text-[68px] text-xl md:text-3xl xl:leading-[110%] text-gray-black font-semibold mb-6"
+                >
+                Gear Up for a Healthier Lifestyle                </h1>
+                <div>
+                  <a href="#" class="btn-primary">
+                    <span>Shop Now</span>
+                    <span
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.5 7.5L20 12M20 12L15.5 16.5M20 12H4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="md:w-1/2 w-full flex justify-center items-center relative"
+              >
+                <img src="./img/Bnr1.png" alt="" />
+                <div class="inline-block absolute top-0 right-0">
+                  <img
+                    src="./img/Bnr1.png"
+                    alt=""
+                  />
+                  <p
+                    class="absolute top-[33px] text-[#F05C52] text-4xl font-bold right-9"
+                  >
+                    15%
+                  </p>
+                  <p class="absolute text-sm font-normal top-[68px] right-10">
+                    Discount
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="container px-3 md:px-5 flex flex-col md:flex-row items-center"
+            >
+              <div class="md:w-1/2 w-full">
+                <p class="text-gray-black text-sm tracking-[0.12em] mb-2">
+                  FitnessFrontier                </p>
+                <h1
+                  class="xl:text-[68px] text-xl md:text-3xl xl:leading-[110%] text-gray-black font-semibold mb-6"
+                >
+                Gear Up for a Healthier Lifestyle                </h1>
+                <div>
+                  <a href="#" class="btn-primary">
+                    <span>Shop Now</span>
+                    <span
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.5 7.5L20 12M20 12L15.5 16.5M20 12H4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="md:w-1/2 w-full flex justify-center items-center relative"
+              >
+                <img src="./img/Bnr2.png" alt="" />
+                <div class="inline-block absolute top-0 right-0">
+                  <img
+                    src="./img/Bnr2.png"
+                    alt=""
+                  />
+                  <p
+                    class="absolute top-[33px] text-[#F05C52] text-4xl font-bold right-9"
+                  >
+                    15%
+                  </p>
+                  <p class="absolute text-sm font-normal top-[68px] right-10">
+                    Discount
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="container px-3 md:px-5 flex flex-col md:flex-row items-center"
+            >
+              <div class="md:w-1/2 w-full">
+                <p class="text-gray-black text-sm tracking-[0.12em] mb-2">
+                  FitnessFrontier                </p>
+                <h1
+                  class="xl:text-[68px] text-xl md:text-3xl xl:leading-[110%] text-gray-black font-semibold mb-6"
+                >
+                Gear Up for a Healthier Lifestyle                 </h1>
+                <div>
+                  <a href="#" class="btn-primary">
+                    <span>Shop Now</span>
+                    <span
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.5 7.5L20 12M20 12L15.5 16.5M20 12H4"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="md:w-1/2 w-full flex justify-center items-center relative"
+              >
+                <img src="./img/Bnr3.png" alt="" />
+                <div class="inline-block absolute top-0 right-0">
+                  <img
+                    src="./img/Bnr3.png"
+                    alt=""
+                  />
+                  <p
+                    class="absolute top-[33px] text-[#F05C52] text-4xl font-bold right-9"
+                  >
+                    15%
+                  </p>
+                  <p class="absolute text-sm font-normal top-[68px] right-10">
+                    Discount
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next banner-slider-button"></div>
+        <div class="swiper-button-prev banner-slider-button"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <img
+        src="./public/assets/images/svg/banner-shapes.svg"
+        alt=""
+        class="xl:absolute xl:right-[189px] xl:bottom-[299px] hidden z-10"
+      />
+    </div>
+    <!-- banner section end -->
+
+    <!-- mixit up section start  -->
+    <section class="lg:py-20 sm:py-8 py-6">
+      <div class="container px-3 md:px-5 xl:px-0">
+        <h2
+          class="text-gray-black xl:text-[32px] xl:leading-[110%] text-xl md:text-2xl text-center font-semibold font-display mb-4"
+        >
+          Our Products
+        </h2>
+        <ul id="filters" class="flex flex-wrap justify-center gap-2 mb-10">
+          <li>
+            <button
+              class="filter text-[#9A9CAA] text-base leading-[110%] font-display font-medium cursor-pointer p-2 mixitup-control-active"
+              data-filter=".all"
+              data-mixitup-control
+            >
+              All
+            </button>
+          </li>
+          <li>
+            <button
+              class="filter text-[#9A9CAA] text-base leading-[110%] font-display font-medium cursor-pointer p-2"
+              data-filter=".newest"
+            >
+              Newest
+            </button>
+          </li>
+          <li>
+            <button
+              class="filter text-[#9A9CAA] text-base leading-[110%] font-display font-medium cursor-pointer p-2"
+              data-filter=".trending"
+            >
+              Trending
+            </button>
+          </li>
+          <li>
+            <button
+              class="filter text-[#9A9CAA] text-base leading-[110%] font-display font-medium cursor-pointer p-2"
+              data-filter=".best-sellers"
+            >
+              Best Sellers
+            </button>
+          </li>
+          <li>
+            <button
+              class="filter text-[#9A9CAA] text-base leading-[110%] font-display font-medium cursor-pointer p-2"
+              data-filter=".featured"
+            >
+              Featured
+            </button>
+          </li>
+        </ul>
+
+        <div id="portfoliolist" class="portfoliolist justify-center mx-auto">
+          <div class="mix all featured" data-cat="featured">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img1.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Dry Fit Shirt</h2>
+                    <div class="card-price">
+                      <data value="300">₱300.00</data>
+  
+                      <data value="500">₱800.00</data>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all trending" data-cat="trending">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Jacket</h2>
+                    <div class="card-price">
+                      <data value="300">₱300.00</data>
+  
+                      <data value="500">₱500.00</data>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all featured" data-cat="featured">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img3.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Tumblur</h2>
+                    <div class="card-price">
+                      <data value="300">₱300.00</data>
+  
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all best-sellers" data-cat="best-sellers">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img4.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Mat</h2>
+                    <div class="card-price">
+                      <data value="300">₱200.00</data>
+  
+                      <data value="500">₱300.00</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all trending" data-cat="trending">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img6.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Dry Fit shorts</h2>
+                    <div class="card-price">
+                      <data value="300">₱350.00</data>
+  
+                      <data value="500">₱500.00</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all trending" data-cat="trending">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img5.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Bag</h2>
+                    <div class="card-price">
+                      <data value="300">₱400.00</data>
+  
+                      <data value="500">₱500.00</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all best-sellers" data-cat="best-sellers">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img7.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Dry Fit Shirtr</h2>
+                    <div class="card-price">
+                      <data value="300">₱300.00</data>
+  
+                      <data value="500">₱500.00</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mix all newest" data-cat="newest">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img8.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Cycling</h2>
+                    <div class="card-price">
+                      <data value="300">₱300.00</data>
+                      </div>                    </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="mix all newest" data-cat="newest">
+            <div class="product-card">
+              
+            </div>
+          </div>
+          
+          <div class="mix all newest" data-cat="newest">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img9.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">New</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Jacket</h2>
+                    <div class="card-price">
+                      <data value="300">₱300</data>
+  
+                      <data value="500">₱500</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="mix all newest" data-cat="newest">
+            <div class="product-card">
+              <a href="product-details.html">
+                <div class="product-thumb">
+                  <img
+                    src="./img/img10.jpg"
+                    alt=""
+                  />
+                  <span class="badge new">FREE</span>
+                </div>
+                <div class="product-info">
+                  <div>
+                    <h2 class="product-name">Keychain</h2>
+                    <div class="card-price">
+                      <data value="300">FREE</data>
+  
+                      <data value="500">₱100</data>
+                    </div>                  </div>
+                  <div>
+                    <button class="cart-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.52081 2.97913L4.42748 3.30913L5.31023 13.826C5.34414 14.2399 5.53284 14.6257 5.83867 14.9066C6.14451 15.1875 6.545 15.3427 6.96023 15.3413H16.9611C17.3586 15.3417 17.743 15.1986 18.0435 14.9382C18.344 14.6778 18.5403 14.3177 18.5964 13.9241L19.4672 7.91263C19.4904 7.75275 19.4819 7.58987 19.4421 7.43329C19.4023 7.27671 19.3321 7.12951 19.2354 7.00011C19.1387 6.8707 19.0174 6.76163 18.8785 6.67913C18.7396 6.59663 18.5858 6.54231 18.4259 6.51929C18.3672 6.51288 4.73365 6.50829 4.73365 6.50829"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.9479 9.89539H15.4898"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.5578 18.5194C6.62502 18.5165 6.69213 18.5272 6.75509 18.551C6.81805 18.5747 6.87556 18.611 6.92414 18.6575C6.97273 18.704 7.01139 18.7599 7.03781 18.8218C7.06422 18.8837 7.07784 18.9503 7.07784 19.0176C7.07784 19.0849 7.06422 19.1515 7.03781 19.2133C7.01139 19.2752 6.97273 19.3311 6.92414 19.3777C6.87556 19.4242 6.81805 19.4605 6.75509 19.4842C6.69213 19.5079 6.62502 19.5187 6.5578 19.5158C6.42936 19.5103 6.30801 19.4554 6.21908 19.3626C6.13015 19.2697 6.08051 19.1461 6.08051 19.0176C6.08051 18.889 6.13015 18.7654 6.21908 18.6726C6.30801 18.5798 6.42936 18.5249 6.5578 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.8988 18.5194C17.0312 18.5194 17.1583 18.572 17.252 18.6657C17.3457 18.7594 17.3983 18.8865 17.3983 19.019C17.3983 19.1515 17.3457 19.2786 17.252 19.3723C17.1583 19.4659 17.0312 19.5186 16.8988 19.5186C16.7663 19.5186 16.6392 19.4659 16.5455 19.3723C16.4518 19.2786 16.3992 19.1515 16.3992 19.019C16.3992 18.8865 16.4518 18.7594 16.5455 18.6657C16.6392 18.572 16.7663 18.5194 16.8988 18.5194Z"
+                          fill="#272343"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="wishlist.html" class="heart-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.63268 10.6315C1.64909 7.56068 2.79768 4.05077 6.02251 3.01218C6.85874 2.74461 7.74682 2.68088 8.61268 2.8263C9.47855 2.97173 10.2971 3.3221 11 3.84818C12.3338 2.81693 14.2743 2.4686 15.9683 3.01218C19.1923 4.05077 20.3491 7.56068 19.3664 10.6315C17.8356 15.499 11 19.2482 11 19.2482C11 19.2482 4.21484 15.5558 2.63268 10.6315V10.6315Z"
+                    stroke="#272343"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="mix all newest" data-cat="newest">
+            <div class="product-card">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- mixit up section end  -->
+
+
+    <!-- top categories product section start -->
+    <section class="overflow-hidden relative lg:pb-20 md:pb-6 pb-3">
+      <div class="container px-3 md:px-5 xl:px-0">
+        <div class="flex justify-between items-center mb-10">
+          <h2
+            class="text-gray-black xl:text-[32px] xl:leading-[110%] text-xl md:text-2xl font-semibold font-display"
+          >
+            Business Partner
+          </h2>
+          <div class="flex gap-[18px]">
+            <button class="categoriesSwiper-button-prev">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  transform="matrix(-1 0 0 1 24 0)"
+                  fill="none"
+                />
+                <path
+                  d="M8.5 7.5L4 12M4 12L8.5 16.5M4 12H20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="categoriesSwiper-button-next">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5 7.5L20 12M20 12L15.5 16.5M20 12H4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="swiper topCategoriesSwiper mx-3 md:mx-0">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-card-02">
+                <div class="product-thumb">
+                  <a href="https://kurtjoshua.github.io/foodfiesta/"
+                    ><img
+                      src="./img/bnsp1.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="product-info">
+                  <h2><a href="#">FoodFiesta</a></h2>
+                  <p>Cayaga, Kurt</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card-02">
+                <div class="product-thumb">
+                  <a href="products.html"
+                    ><img
+                      src="./img/bnsp2.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="product-info">
+                  <h2><a href="#">TechTreasure</a></h2>
+                  <p>Fatal, Moises</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="product-card-02">
+                <div class="product-thumb">
+                  <a href="https://miigurd.github.io/E-Commerce/"
+                    ><img
+                      src="./img/bnsp3.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="product-info">
+                  <h2><a href="#">TravelTrove</a></h2>
+                  <p>Mag-usara, Kirt</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- top categories product section end -->
+
+
+    <!-- Testimonials section start -->
+    <section class="newsletter{overflow-hidden lg:py-20 sm:py-8 py-5 bg-[#F0F2F3]}">
+      <div class="container">
+
+        <div class="newsletter-card" style="background-image: url('./assets/images/newsletter-bg.png')">
+
+          <h2 class="card-title">Subscribe Newsletter</h2>
+
+          <p class="card-text">
+            Enter your email below to be the first to know about new collections and product launches.
+          </p>
+
+          <form action="" class="card-form">
+
+            <div class="input-wrapper">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <input type="email" name="emal" placeholder="Enter your email" required class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              <span>Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Testimonials section end -->
+
+  <!-- ======================================================================================================================================== -->
+    <!--
+    - FOOTER
+  -->
+  <footer>
+    
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <a href="index.html" class="logo">
+                <img src="./img/wLogo.png" width="200" height="70" alt="Logo" />
+            </a>
+        </li>
+        <li class="footer-nav-item">
+            <p class="content">
+                Get ready for a healthier<br />lifestyle, start your journey now!
+            </p>
+        </li>
+        <li class="footer-nav-item">
+            <ul class="social-list">
+                <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-linkedin"></ion-icon>                    </a>
+                </li>
+            </ul>
+        </li>
+              <a href="#" class="social-link">
+                <i class="bx bxl-linkedin-square"></i>
+              </a>
+            </li>
+        </ul>
+
+        <!-- Column 2: My Account -->
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <h2 class="nav-title">MY ACCOUNT</h2>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="order-details.html" class="footer-nav-link">Cart</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Goals</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Booking</a>
+          </li>
+        </ul>
+  
+        <!-- Column 3: Location -->
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <h2 class="nav-title">LOCATION</h2>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Katapatan, Cabuyao</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Mamatid, Cabuyao</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Parian, Calamba</a>
+          </li>
+        </ul>
+  
+        <!-- Column 4: Contact -->
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">
+              123 Block 456 lot Katapatan,<br />Cabuyao, 4025, PH
+            </address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+639876543212" class="footer-nav-link">+639876543212</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:Fitfrontire@gmail.com" class="footer-nav-link">Fitfrontire@gmail.com</a>
+          </li>
+        </ul>
+        <ul class="footer-nav-list">
+
+          
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; <a href="#">Fitfrontire</a> all rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- script file here -->
+    <script src="./public/assets/plugins/js/jquery.js"></script>
+    <script src="./public/assets/plugins/js/swipper.js"></script>
+    <script src="./public/assets/plugins/js/select2.js"></script>
+    <script src="./public/assets/plugins/js/mixitUp.js"></script>
+    <script src="./public/js/app.js"></script>
+  </body>
+</html>
